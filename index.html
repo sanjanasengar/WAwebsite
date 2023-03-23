@@ -128,24 +128,7 @@ window.dataLayer.push({
       });
 	    
 	    
-	    
-	    Tag type: GA4 Event
-Event Name: view_item_list
-Data Layer Variables (Name - Data Layer Variable Name):
-Ecommerce Items - ecommerce.items
-Ecommerce Item List ID - ecommerce.item_list_id
-Ecommerce Item List Name - ecommerce.item_list_name
-Event Parameters (Parameter Name - Value):
-items - {{Ecommerce Items}}
-item_list_id - {{Ecommerce Item List ID}}
-item_list_name - {{Ecommerce Item List Name}}
-Trigger: event equals view_item_list
-Trigger configuration:
-
-Trigger Type: Custom Event
-Event Name: view_item_list
-This trigger fires on: All Custom Events
-*******************
+	 
  dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
 dataLayer.push({
   event: "view_item_list",
