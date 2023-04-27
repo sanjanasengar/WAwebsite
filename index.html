@@ -27,24 +27,7 @@ window.dataLayer.push(
 </script>
 	
 	
-	<script>
-window.dataLayer = window.dataLayer || [];
-window.dataLayer.push(
-{
-  event : 'transaction_id',
-        ecommerce:
-	transaction_id: "T_12345_2",
-                value: 25.42,
-                tax: 4.90,
-	        shipping:5.99,
-	        currrency:"USD",
-        {
-            item_name:"web project",
-            item_id:"course_0111",
-            item_cat:"Offline course",
-}
-});
-</script>
+	
 	
 	
     <!-- Required meta tags -->
@@ -166,6 +149,32 @@ window.dataLayer.push({
                   item_variant: "green",
                   location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
                   price: 9.99,
+                  quantity: 1
+                }]
+          });
+      });
+    
+	    
+	    
+	    
+	    <script>
+    document.getElementById("transaction_id").addEventListener("click", function () {
+        gtag("event", "transaction_id", {
+                
+                transaction_id: "T_12345_2",
+                value: 25.42,
+                tax: 4.90,
+                shipping: 5.99,
+                currency: "USD",
+                coupon: "SUMMER_SALE",
+                items: [
+                {
+                  item_id: "SKU_12345",
+                  item_name: "web_project",
+                  affiliation: "Google Merchandise Store",
+                  item_brand: "Google",
+                  item_variant: "green",
+                 
                   quantity: 1
                 }]
           });
