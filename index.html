@@ -157,29 +157,35 @@ window.dataLayer.push({
 	    
 	    
 	    
-	    <script>
-    document.getElementById("transaction_id").addEventListener("click", function () {
-        gtag("event", "transaction_id", {
-                
-                transaction_id: "T_12345_2",
-                value: 25.42,
-                tax: 4.90,
-                shipping: 5.99,
-                currency: "USD",
-                coupon: "SUMMER_SALE",
-                items: [
-                {
-                  item_id: "SKU_12345",
-                  item_name: "web_project",
-                  affiliation: "Google Merchandise Store",
-                  item_brand: "Google",
-                  item_variant: "green",
-                 
-                  quantity: 1
-                }]
-          });
-      });
-    
+ dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+dataLayer.push({
+	    event: " purchase1", 
+	ecommerce: {
+  currency: "USD",
+  value: 7.77,
+  items: 
+    {
+      item_id: "SKU_12345",
+      item_name: "Stan and Friends Tee",
+      affiliation: "Google Merchandise Store",
+      coupon: "SUMMER_FUN",
+      discount: 2.22,
+      index: 0,
+      item_brand: "Apple",
+      item_category: "Apparel",
+      
+      
+      item_list_id: "related_products",
+      item_list_name: "Related Products",
+      item_variant: "green",
+      
+      price: 9.99,
+      quantity: 1
+    }
+	}
+  });
+	    
+	    	    
 	    
 	    
 	 
